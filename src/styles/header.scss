@@ -1,0 +1,37 @@
+@import 'common.scss';
+@import '_variables.scss';
+
+header {
+    background-color: $backgroundColor;
+    color: $fontColor;
+}
+
+.top {
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 1fr;
+    height: 80px;
+
+    &__logo {
+        justify-self: left;
+        align-self: center;
+    }
+
+    &__menu {
+        justify-self: center;
+        align-self: center;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 79px;
+    }
+
+    &__search {
+        justify-self: right;
+        align-self: center;
+    }
+
+    &__menuitem {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}

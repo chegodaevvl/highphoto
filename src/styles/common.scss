@@ -1,0 +1,40 @@
+@import '_mixin.scss';
+
+@font-face {
+	font-family: 'FirsNeue';
+	src: local('FirsNeue-Regular'),
+		url('../fonts/TTFirsNeue-Regular.woff2') format('woff2'),
+		url('../fonts/TTFirsNeue-Regular.woff') format('woff');
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FirsNeue';
+	src: local('FirsNeue-Medium'),
+		url('../fonts/TTFirsNeue-Medium.woff2') format('woff2'),
+		url('../fonts/TTFirsNeue-Medium.woff') format('woff');
+	font-display: swap;
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'FirsNeue';
+	src: local('FirsNeue-Bold'),
+		url('../fonts/TTFirsNeue-Bold.woff2') format('woff2'),
+		url('../fonts/TTFirsNeue-Bold.woff') format('woff');
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
+
+body {
+    font-family: 'FirsNeue', 'sans-serif';
+}
+
+.container {
+    max-width: 1290px;
+    margin: 0 auto;
+}

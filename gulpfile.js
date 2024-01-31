@@ -8,18 +8,30 @@ import image from 'gulp-image'
 import { deleteAsync } from 'del'
 import browserSync from 'browser-sync'
 
-const styleFiles = 'src/css/**/*.scss'
+const styleFiles = 'src/styles/**/*.scss'
 const htmlFiles = 'src/**/*.html'
 const resourcesFiles = 'src/resources/'
 const imageFiles = 'src/img/**/*.png'
 const appLocation = 'app'
 const appStyles =  'app/css'
 const appImages = 'app/img'
+const fontsLocation = 'src/resources/fonts/*.*'
+const appFontsLocation = 'app/fonts'
 const sass = gulpSass(dartSass)
 const server = browserSync.create()
 
 function cleanLocation() {
     return deleteAsync([appLocation])
+}
+
+function favicon() {
+    return gulp.src('src/resources/favicon.ico')
+        .pipe(gulp.dest(appLocation))
+}
+
+function fontsProcessing() {
+    return gulp.src(fontsLocation)
+        .pipe(gulp.dest(appFontsLocation))
 }
 
 function stylesProcessing() {
@@ -69,6 +81,6 @@ function watchFiles() {
     gulp.watch(imageFiles, gulp.series(imagesProcessing, reload))
 }
 
-const build = gulp.series(cleanLocation, stylesProcessing, htmlProcessing, imagesProcessing, serve, watchFiles)
+const build = gulp.series(cleanLocation, fontsProcessing, stylesProcessing, favicon, htmlProcessing, imagesProcessing, serve, watchFiles)
 
 export default build
