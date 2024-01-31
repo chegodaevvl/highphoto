@@ -9,9 +9,8 @@ header {
 .top {
     display: grid;
     grid-template-columns: 20% 1fr 20%;
-    grid-template-rows: 1fr;
-    height: 80px;
-
+    grid-template-rows: 80px;
+    
     &__logo {
         justify-self: left;
         align-self: center;
