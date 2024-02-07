@@ -9,3 +9,8 @@
     padding: 0;
     border: none;
 }
+
+@mixin headerReset {
+    margin: 0;
+    padding: 0;
+}
