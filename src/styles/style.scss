@@ -1,1 +1,5 @@
-@import 'header.scss';
+@import '../../node_modules/normalize.css/normalize';
+
+@import '_header.scss';
+@import '_classes.scss';
+@import '_about.scss';

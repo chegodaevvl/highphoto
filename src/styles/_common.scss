@@ -32,9 +32,15 @@
 
 body {
     font-family: 'FirsNeue', 'sans-serif';
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     max-width: 1290px;
     margin: 0 auto;
+}
+
+img {
+	width: 100%;
 }

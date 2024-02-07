@@ -1,9 +1,10 @@
-@import 'common.scss';
+@import '_common.scss';
 @import '_variables.scss';
 
 header {
     background-color: $backgroundColor;
     color: $fontColor;
+    margin-bottom: 41px;
 }
 
 .top {
