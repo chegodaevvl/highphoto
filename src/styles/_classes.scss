@@ -1,4 +1,4 @@
-@import '_common.scss';
+// @import '_common.scss';
 @import '_variables.scss';
 @import '_mixin.scss';
 
@@ -7,35 +7,22 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, auto);
     gap: 30px;
-    margin-bottom: 68px;
-
-    &__caption {
-        display: block;
-        margin-bottom: 18px;
-    }
-
-    &__tag {
-        position: absolute;
-        padding: 7px 15px;
-        right: 15px;
-        top: 15px;
-        background: $backgroundColor;
-    }
 
     &__promo {
         margin: 405px 145px 60px 60px;
-        color: $fontColor;
     }
 
     &__author {
         font-size: 16px;
         font-weight: 400;
+        color: $mainLightColor;
     }
 
     &__title {
         font-size: 36px;
         font-weight: 800;
         margin-bottom: 19px;
+        color: $mainLightColor;
     }
 
 }
@@ -59,12 +46,6 @@
 .work-1 {
     grid-column: 3 / 8;
     grid-row: 2 / 3;
-}
-
-.tag-text {
-    color: $fontColor;
-    font-size: 14px;
-    font-weight: 400;
 }
 
 .work-2 {

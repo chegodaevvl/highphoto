@@ -33,12 +33,17 @@
 
 * {
 	box-sizing: border-box;
+	color: $mainDarkColor;
   }
 
 body {
     font-family: 'FirsNeue', 'sans-serif';
     margin: 0;
     padding: 0;
+}
+
+section {
+	margin-bottom: 68px;
 }
 
 .container {
@@ -53,8 +58,44 @@ img {
 .standardBtn {
 	@include btnReset;
 
-	color: $fontColor;
+	color: $mainLightColor;
 	font-size: 16px;
 	padding: 15px 22px;
-	background: $btnColor;
+	background: $secondColor;
+}
+
+.section__header {
+	@include headerReset;
+
+	font-size: 24px;
+	font-weight: 800;
+}
+
+.onWhite {
+	color: $mainDarkColor;
+}
+
+.onDark {
+	color: $mainLightColor;
+}
+
+.hashTag {
+	position: absolute;
+	padding: 7px 15px;
+	right: 15px;
+	top: 15px;
+	background: $mainDarkColor;
+	color: $mainLightColor;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.transperentBtn {
+	background: transparent;
+	padding: 15px 22px;
+	border: solid 3px $secondColor;
+	color: $mainLightColor;
+	font-size: 16px;
+	font-weight: 800;
+	align-self: flex-start;
 }
