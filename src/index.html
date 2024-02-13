@@ -6,6 +6,8 @@
     <title>High Pass</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU" defer></script>
+    <script src="scripts/main.js" defer></script>
 </head>
 <body>
     <header>
@@ -35,7 +37,7 @@
             </div>
         </div>
     </header>
-    <main>
+    <?xml version="1.0" encoding="utf-8"?><svg style="display: none;" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style>:root>svg{display:none}:root>svg:target{display:block}</style><svg fill="none" viewBox="0 0 22 22" id="phone" xmlns="http://www.w3.org/2000/svg"><path d="M18.343 14.098a10.49 10.49 0 0 1-3.236-.513.896.896 0 0 0-.926.22l-1.44 1.806c-2.593-1.238-5.023-3.575-6.315-6.261l1.787-1.522a.935.935 0 0 0 .22-.935 10.223 10.223 0 0 1-.513-3.235.916.916 0 0 0-.907-.908H3.84c-.495 0-1.091.22-1.091.908 0 8.515 7.086 15.592 15.593 15.592.65 0 .907-.578.907-1.082v-3.162a.916.916 0 0 0-.907-.908Z" fill="#FF6E30"/></svg></svg>    <main>
         <section>
             <div class="container classes">
                 <div class="classes__item class-promo">
@@ -83,7 +85,7 @@
                             <h2 class="about__header">
                                 Подписаться на&nbsp;рассылку
                             </h2>
-                            <input type="text" class="about__email" name="subscription_email" placeholder="Email">
+                            <input type="email" class="about__email" name="subscription_email" placeholder="Email">
                             <button class="standardBtn">
                                 Отправить
                             </button>
@@ -207,6 +209,47 @@
                             <span class="projects__date">1&nbsp;марта</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container contacts">
+                <h2 class="section__header onWhite contacts__header">
+                    Контакты
+                </h2>
+                <div class="contacts__grid">
+                    <div class="contacts__mapArea">
+                        <div class="contacts__map"  id="contacts-map"></div>
+                        <div class="contacts__slide">
+                            <div class="closeBtn">
+                                <img src="../img/closeBtn.png" alt="">
+                            </div>
+                            <h3 class="contacts__title">Студия &laquo;High pass&raquo;</h3>
+                            <div class="contacts__address">
+                                107045, Москва, Даев переулок, дом&nbsp;41, бизнес-центр &laquo;Даев Плаза&raquo;, этаж&nbsp;8, офис &#8470;&nbsp;82
+                            </div>
+                            <div class="contacts__phone">
+                                <a href="tel:+749542423532" class="contacts__phonenumber">
+                                    +7&nbsp;495 424-23-532
+                                    <svg class="phoneIcon">
+                                        <use xlink:href="#phone"></use>
+                                    </svg>
+                                    </a>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="" class="contact__form" method="POST">
+                        <h3 class="contacts__formTitle">
+                            Оставить заявку
+                        </h3>
+                        <div class="contacts__description">
+                            Оставьте ваши данные, указав в&nbsp;графе &laquo;Комментарий&raquo; желаемые время и&nbsp;дату съёмки или другого мероприятия
+                        </div>
+                        <input type="text" class="contacts__field" name="contact_name" placeholder="Имя">
+                        <input type="email" class="contacts__field" name="contact_email" placeholder="Email">
+                        <textarea name="contact_comment comment_field" id="" rows="5" class="contacts__field" placeholder="Комментарий"></textarea>
+                        <input type="submit" class="contacts__btn" value="Отправить">
+                    </form>
                 </div>
             </div>
         </section>
