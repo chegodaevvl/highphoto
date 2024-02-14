@@ -1,0 +1,60 @@
+@import '_variables.scss';
+
+.footer {
+    background-color: $mainDarkColor;
+    padding: 25px 0;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 177px;
+        align-items: center;
+    }
+
+    &__copyright {
+        color: $lightGreyColor;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    &__logoImg {
+        max-width: 190px;
+    }
+
+    &__quote {
+        color: $lightGreyColor;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+
+    &__interesting {
+        color: $lightGreyColor;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        margin-bottom: 8px;
+    }
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    &__social {
+        align-self: center;
+    }
+
+    &__icons {
+        display: grid;
+        grid-template-columns: 30px 30px;
+        grid-template-rows: 30px;
+        gap: 20px;
+    }
+}
+
+.socialWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
