@@ -19,7 +19,7 @@ const appLocation = 'app'
 const appStyles =  'app/css'
 const appImages = 'app/img'
 const appScripts = 'app/scripts'
-const appSvg = 'app/img/svg'
+// const appSvg = 'app/img/svg'
 const fontsLocation = 'src/resources/fonts/*.*'
 const appFontsLocation = 'app/fonts'
 const sass = gulpSass(dartSass)
@@ -80,7 +80,7 @@ function svgProcessing() {
                 }
             }
         }))
-        .pipe(gulp.dest(appSvg))
+        .pipe(gulp.dest(appLocation))
 }
 
 function reload(done) {

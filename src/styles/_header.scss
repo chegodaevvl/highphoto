@@ -1,5 +1,6 @@
 // @import '_common.scss';
 @import '_variables.scss';
+@import '_mixin.scss';
 
 header {
     background-color: $mainDarkColor;
@@ -20,18 +21,42 @@ header {
         justify-self: center;
         align-self: center;
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(5, auto);
         gap: 79px;
     }
 
     &__search {
+        @include btnReset;
         justify-self: right;
         align-self: center;
     }
+
+    // &__search:hover:not(:focus-visible) > .searchIcon > path {
+    //     fill: $hoverColor;
+    // }
 
     &__menuitem {
         font-size: 16px;
         font-weight: 400;
         color: $mainLightColor;
+        cursor: pointer;
     }
+
 }
+
+.searchIcon {
+    width: 25px;
+    height: 25px;
+}
+
+// .searchIcon > path:hover {
+//     fill: $hoverColor;
+// }
+
+// .focusEffect:focus-visible:before {
+// 	opacity: 1;
+// }
+
+// .focusEffect:active:not(:focus-visible) {
+// 	color: $activeColor;
+// }

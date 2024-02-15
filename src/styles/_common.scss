@@ -56,7 +56,9 @@ img {
 }
 
 a {
+	color: inherit;
 	text-decoration: none;
+	outline: none;
 }
 
 .standardBtn {
@@ -64,8 +66,27 @@ a {
 
 	color: $mainLightColor;
 	font-size: 16px;
-	padding: 15px 22px;
-	background: $secondColor;
+	padding: 9px 22px;
+	background-color: $secondColor;
+	border: solid 3px $secondColor;
+	transition-property: background-color, border-color;
+	transition-duration: .4s;
+	transition-timing-function: ease;
+}
+
+.standardBtn:hover:not(:focus-visible) {
+	background-color: $focusColor;
+	border-color: $focusColor;
+}
+
+.standardBtn:active:not(:focus-visible) {
+	background-color: $activeColor;
+	border-color: $activeColor;
+}
+
+.standardBtn:focus-visible {
+	background-color: $hoverColor;
+	border-color: $activeColor;
 }
 
 .section__header {
@@ -95,11 +116,62 @@ a {
 }
 
 .transperentBtn {
+	@include btnReset;
+
 	background: transparent;
-	padding: 15px 22px;
+	padding: 9px 22px;
 	border: solid 3px $secondColor;
 	color: $mainLightColor;
 	font-size: 16px;
 	font-weight: 800;
 	align-self: flex-start;
+	transition-property: background-color, border-color;
+	transition-duration: .4s;
+	transition-timing-function: ease;
+}
+
+.transperentBtn:hover:not(:focus-visible) {
+	background-color: $secondColor;
+}
+
+.transperentBtn:active:not(:focus-visible) {
+	background-color: $activeColor;
+	border-color: $activeColor;
+}
+
+.transperentBtn:focus-visible {
+	background-color: $focusColor;
+	border-color: $secondColor;
+}
+
+.focusEffect {
+	position: relative;
+	width: 100%;
+	transition: color .4s ease;
+	z-index: 2;
+}
+
+.focusEffect:before {
+	content: "";
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	bottom: -5px;
+	left: -5px;
+	background-color: $focusColor;
+	z-index: -1;
+	opacity: 0;
+	transition: opacity .4s ease;
+}
+
+.focusEffect:focus-visible:before {
+	opacity: 1;
+}
+
+.focusEffect:hover:not(:focus-visible) {
+	color: $hoverColor;
+}
+
+.focusEffect:active:not(:focus-visible) {
+	color: $activeColor;
 }

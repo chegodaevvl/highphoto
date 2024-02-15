@@ -41,10 +41,10 @@
     }
 
     &__email {
-        padding: 15px 23px;
-        border: none;
+        padding: 9px 23px;
+        border: solid 3px $backgroundField;
         width: 74%;
-        margin-right: 30px;
+        margin-right: 27px;
         color: $mainLightColor;
         background: $backgroundField;
     }
