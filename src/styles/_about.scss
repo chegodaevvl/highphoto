@@ -42,14 +42,29 @@
 
     &__email {
         padding: 9px 23px;
-        border: solid 3px $backgroundField;
+        border: solid 1px $backgroundField;
         width: 74%;
         margin-right: 27px;
-        color: $mainLightColor;
+        color: $lightGreyColor;
         background: $backgroundField;
+        outline: none;
+    }
+
+    &__email:focus-visible {
+        border-color: $secondColor;
     }
 
     &__email::placeholder {
+        color: $lightGreyColor;
+        transition: color .4s ease;
+    }
+
+    &__email:hover:not(:focus-visible)::placeholder {
+        color: $secondColor;
+    }
+
+    &__email:active:not(:focus-visible)::placeholder {
         color: $mainLightColor;
     }
+
 }
