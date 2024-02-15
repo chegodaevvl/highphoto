@@ -40,10 +40,29 @@
 
     &__field {
         width: 100%;
-        padding: 15px 23px;
+        padding: 13px 23px;
         margin-bottom: 20px;
         background-color: $additionalGreyColor;
-        border: none;
+        border: solid 1px $additionalGreyColor;
+        transition: border-color .4s ease;
+        outline: none;
+    }
+
+    &__field:focus-visible {
+        border-color: $secondColor;
+    }
+
+    &__field::placeholder {
+        color: $greyFontColor;
+        transition: color .4s ease;
+    }
+
+    &__field:hover:not(:focus-visible)::placeholder {
+        color: $secondColor;
+    }
+
+    &__field:active:not(:focus-visible)::placeholder {
+        color: $mainDarkColor;
     }
 
     &__btn {
