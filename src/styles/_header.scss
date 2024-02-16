@@ -49,14 +49,6 @@ header {
     height: 25px;
 }
 
-// .searchIcon > path:hover {
-//     fill: $hoverColor;
-// }
-
-// .focusEffect:focus-visible:before {
-// 	opacity: 1;
-// }
-
-// .focusEffect:active:not(:focus-visible) {
-// 	color: $activeColor;
-// }
+use.search {
+    fill: $mainLightColor;
+}

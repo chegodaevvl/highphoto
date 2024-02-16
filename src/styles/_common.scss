@@ -61,6 +61,10 @@ a {
 	outline: none;
 }
 
+svg g, svg path {
+	fill: inherit;
+}
+
 .standardBtn {
 	@include btnReset;
 
