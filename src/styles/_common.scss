@@ -179,3 +179,14 @@ svg g, svg path {
 .focusEffect:active:not(:focus-visible) {
 	color: $activeColor;
 }
+
+// Adaptation for tablet screen
+
+@media (max-width: 1352px) {
+
+	.container {
+		max-width: 100%;
+		padding: 0 31px;
+	}
+
+}
