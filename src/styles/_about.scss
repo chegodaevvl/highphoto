@@ -68,3 +68,14 @@
     }
 
 }
+
+@media (max-width: 1352px) {
+
+.about {
+
+    &__email {
+        margin-bottom: 20px;
+    }
+}
+
+}

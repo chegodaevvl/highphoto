@@ -150,7 +150,7 @@ svg g, svg path {
 
 .focusEffect {
 	position: relative;
-	width: 100%;
+	// width: 100%;
 	transition: color .4s ease;
 	z-index: 2;
 }
@@ -189,4 +189,23 @@ svg g, svg path {
 		padding: 0 31px;
 	}
 
+}
+
+// Adapatation for modern phone
+
+@media (max-width: 1000px) {
+
+	.container {
+		padding: 0 28px;
+	}
+
+}
+
+// Adaptation for small phone
+
+@media (max-width: 765px) {
+
+	.container {
+		padding: 0 21px;
+	}
 }

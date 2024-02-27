@@ -1,41 +1,67 @@
-// @import '_common.scss';
 @import '_variables.scss';
 @import '_mixin.scss';
 
-header {
-    background-color: $mainDarkColor;
-    margin-bottom: 41px;
-}
+.header {
 
-.top {
-    display: grid;
-    grid-template-columns: 20% 1fr 20%;
-    grid-template-rows: 80px;
-    
-    &__logo {
-        justify-self: left;
-        align-self: center;
+    &__top {
+        background-color: $mainDarkColor;
     }
 
-    &__menu {
+    &__bottom {
+        display: none;
+        background-color: $backgroundField;
+        color: $mainLightColor;
+    }
+
+    &__main {
+        display: grid;
+        grid-template-columns: 20% 1fr 20%;
+        grid-template-rows: 80px;
+    }
+
+        &__logo {
+            justify-self: left;
+            align-self: center;
+    }
+
+    &__topmenu {
         justify-self: center;
         align-self: center;
         display: grid;
         grid-template-columns: repeat(5, auto);
         gap: 79px;
+        font-size: 16px;
+        font-weight: 400;
+        color: $mainLightColor;
+    }   
+
+    &__topmenuitem {
+        cursor: pointer;
     }
+
 
     &__search {
         @include btnReset;
+
         justify-self: right;
         align-self: center;
     }
 
-    &__menuitem {
+    &__menu {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        gap: 72px;
         font-size: 16px;
         font-weight: 400;
         color: $mainLightColor;
-        cursor: pointer;
+    }
+
+    &__burger {
+        @include btnReset;
+
+        display: none;
+        width: 20px;
+        height: 18px;
     }
 
 }
@@ -45,18 +71,77 @@ header {
     height: 25px;
 }
 
-use.search {
+use.search, use.burger {
     fill: $mainLightColor;
+}
+
+.burgerIcon {
+    width: 100%;
+    height: 100%;
 }
 
 // Adaptation for tablet screen
 
 @media (max-width: 1352px) {
 
-	.top {
+	.header {
 		
-        &__menu {
+        &__topmenu {
             gap: 33px;
+        }
+	}
+
+}
+
+@media (max-width: 1000px) {
+
+	.header {
+
+        &__main {
+            grid-template-columns: repeat(2, auto);
+            grid-template-areas:
+                "logo search";
+        }
+		
+        &__logo {
+            grid-area: logo;
+        }
+
+        &__search {
+            grid-area: search;
+        }
+
+        &__topmenu {
+            display: none;
+        }
+
+        &__bottom {
+            display: block;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+	}
+
+}
+
+// Adaptation for small phone
+
+@media (max-width: 765px) {
+
+	.header {
+		
+        &__bottom {
+            padding-top: 14px;
+            padding-bottom: 13px;
+        }
+
+        &__menu {
+            display: none;
+        }
+
+        &__burger {
+            display: block;
         }
 	}
 
