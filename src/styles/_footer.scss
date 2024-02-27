@@ -65,6 +65,27 @@
         gap: 20px;
     }
 
+    &__bottom {
+        display: none;
+        background-color: $backgroundField;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, auto);
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logoimg {
+        justify-self: center;
+    }
+
+    &__copyrightbottom {
+        color: $lightGreyColor;
+        font-size: 10px;
+        font-weight: 400;
+    }
+
 }
 
 .socialWrapper {
@@ -78,6 +99,68 @@ use.icon {
     transition: fill .4s ease;
 }
 
-// use.icon:hover {
-//     fill: $hoverColor;
-// }
+// Adaptation for tablet screen
+
+@media (max-width: 1352px) {
+    .footer {
+
+        &__grid {
+            gap: 69px;
+        }
+
+        &__logo {
+            margin-right: 40px;
+        }
+
+    }
+}
+
+// Adapatation for modern phone
+
+@media (max-width: 1000px) {
+
+    .footer {
+
+        &__grid {
+            grid-template-columns: repeat(2, auto);
+        }
+        
+        &__quote {
+            display: none;
+        }
+        
+        &__social {
+            justify-self: end;
+        }
+    }
+
+}
+
+// Adaptation for small phone
+
+@media (max-width: 765px) {
+
+	.footer {
+
+        padding: 0;
+		
+        &__grid {
+            grid-template-columns: auto;
+            padding-top: 31px;
+            padding-bottom: 32px;
+        }
+
+        &__logo {
+            display: none;
+        }
+
+        &__social {
+            justify-self: center;
+        }
+
+        &__bottom {
+            display: grid;
+        }
+
+	}
+}
