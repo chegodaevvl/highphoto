@@ -1,6 +1,10 @@
 @import '_variables.scss';
 @import '_mixin.scss';
 
+header {
+    margin-bottom: 41px;
+}
+
 .header {
 
     &__top {
@@ -84,7 +88,11 @@ use.search, use.burger {
 
 @media (max-width: 1352px) {
 
-	.header {
+	header {
+        margin-bottom: 34px;
+    }
+
+    .header {
 		
         &__topmenu {
             gap: 33px;
@@ -129,7 +137,11 @@ use.search, use.burger {
 
 @media (max-width: 765px) {
 
-	.header {
+	header {
+        margin-bottom: 30px;
+    }
+
+    .header {
 		
         &__bottom {
             padding-top: 14px;
