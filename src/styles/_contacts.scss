@@ -15,10 +15,6 @@
         "map map form";
     }
 
-    // &__map {
-    //     grid-area: map;
-    // }
-
     &__form {
         grid-area: form;
         display: flex;
@@ -155,7 +151,6 @@ use.phone {
             width: 100%;
             height: auto;
             padding: 25px 30px 21px 30px;
-            // position: relative;
         }
 
         &__address {
@@ -164,7 +159,6 @@ use.phone {
         }
 
         &__phone {
-            // display: inline-block;
             position: absolute;
             right: 245px;
             bottom: 28px;
