@@ -83,7 +83,7 @@
 
     &__slide {
         position: absolute;
-        top: 0;
+        bottom: 0;
         left: 0;
         width: 46%;
         height: 100%;
@@ -143,4 +143,88 @@ textarea {
 
 use.phone {
     fill: $secondColor;
+}
+
+// Adaptation for tablet screen
+
+@media (max-width: 1352px) {
+
+	.contacts {
+
+        &__slide {
+            width: 100%;
+            height: auto;
+            padding: 25px 30px 21px 30px;
+            // position: relative;
+        }
+
+        &__address {
+            width: 293px;
+            margin-bottom: 0;
+        }
+
+        &__phone {
+            // display: inline-block;
+            position: absolute;
+            right: 245px;
+            bottom: 28px;
+        }
+
+	}
+
+}
+
+// Adapatation for modern phone
+
+@media (max-width: 1000px) {
+
+	.contacts {
+		
+        &__grid {
+            grid-template-columns: 100%;
+            grid-template-rows: repeat(2, auto);
+            gap: 24px;
+            grid-template-areas: 
+                "map"
+                "form";
+        }
+
+        &__slide {
+            padding-right: 248px;
+            padding-bottom: 24px;
+        }
+
+        &__address {
+            width: auto;
+            margin-bottom: 3px;
+        }
+
+        &__phone {
+            position: unset;
+        }
+
+        &__form {
+            padding-right: 248px;
+        }
+	}
+
+}
+
+// Adaptation for small phone
+
+@media (max-width: 765px) {
+
+    .contacts {
+
+        &__mapArea {
+            margin-left: -27px;
+            width: calc(100% + 42px)
+        }
+
+        &__form {
+            padding-right: 0;
+        }
+
+    }
+
 }
