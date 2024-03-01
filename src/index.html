@@ -71,25 +71,28 @@
                     <h3 class="section__header onWhite classes__header">
                         Работы участников предыдущего мастер-класса
                     </h3>
-                    <img
-                        srcset="
-                            img/class_4-320.png 278w,
-                            img/class_3-768.png 342w,
-                            img/class_3-1024.png 466w,
-                            img/class_2.png 630w
-                        "
-                        sizes="(max-width: 320px) 278px,
-                            (max-width: 768px) 342px,
-                            (max-width: 1352px) 466px,
-                            630px
-                            "
-                        src="img/class_2.png" alt="" />
+                    <picture>
+                        <source srcset="../img/class_2-320.png" media="(max-width: 765px)"/>
+                        <source srcset="../img/class_2-768.png" media="(max-width: 1000px)"/>
+                        <source srcset="../img/class_2-1024.png" media="(max-width: 1352px)"/>
+                        <img src="../img/class_2.png" alt="" />
+                    </picture>
                 </div>
                 <div class="classes__item work-2">
-                    <img src="img/class_3.png" alt="">
+                    <picture>
+                        <source srcset="../img/class_3-320.png" media="(max-width: 765px)"/>
+                        <source srcset="../img/class_3-768.png" media="(max-width: 1000px)"/>
+                        <source srcset="../img/class_3-1024.png" media="(max-width: 1352px)"/>
+                        <img src="img/class_3.png" alt="">
+                    </picture>
                 </div>
                 <div class="classes__item work-3">
-                    <img src="img/class_4.png" alt="">
+                    <picture>
+                        <source srcset="../img/class_4-320.png" media="(max-width: 765px)"/>
+                        <source srcset="../img/class_4-768.png" media="(max-width: 1000px)"/>
+                        <source srcset="../img/class_4-1024.png" media="(max-width: 1352px)"/>
+                        <img src="img/class_4.png" alt="">
+                    </picture>
                 </div>
             </div>
         </section>

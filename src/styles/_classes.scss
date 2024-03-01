@@ -7,10 +7,6 @@
     grid-template-rows: repeat(3, auto);
     gap: 30px;
 
-    &__promo {
-        margin: 405px 145px 60px 60px;
-    }
-
     &__author {
         font-size: 16px;
         font-weight: 400;
@@ -40,6 +36,7 @@
     background-image: url('../img/class_1.png');
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 405px 145px 60px 60px;
 }
 
 .previuos-work {
@@ -54,17 +51,58 @@
     grid-row: 2 / 3;
 }
 
+// Adaptation for tablet screen
+
 @media (max-width: 1352px) {
 
-	.classes {
-
-        &__promo {
-            margin: 425px 30px 30px 30px;
-        }
-    }
-
     .class-promo {
+        padding: 425px 30px 30px 30px;
         background-image: url('../img/class_1-1024.png');
 	}
+
+}
+
+// Adapatation for modern phone
+
+@media (max-width: 1000px) {
+
+    .class-promo {
+        padding: 223px 30px 30px 30px;
+        background-image: url('../img/class_1-768.png');
+    }
+
+}
+
+// Adaptation for small phone
+
+@media (max-width: 765px) {
+
+    .classes {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 30px;
+        grid-template-areas: 
+        "promo promo"
+        "bigimg bigimg"
+        "img3 img4";
+    }
+    
+    .class-promo {
+        padding: 234px 30px 30px 30px;
+        background-image: url('../img/class_1-320.png');
+        grid-area: promo;
+	}
+
+    .previuos-work {
+        grid-area: bigimg;
+    }
+
+    .work-2 {
+        grid-area: img3;
+    }
+
+    .work-3 {
+        grid-area: img4;
+    }
 
 }
