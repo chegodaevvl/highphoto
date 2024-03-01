@@ -26,6 +26,10 @@
 
     &__desc {
         margin-bottom: 13px;
+        -webkit-line-clamp: 3;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     &__calendar {
@@ -121,7 +125,11 @@
             "seventh seventh seventh fifth fifth fifth fifth fifth";
         }
 
-	}
+        &__desc {
+            -webkit-line-clamp: 2;
+        }
+    
+    }
 
 }
 
@@ -139,6 +147,10 @@
             "forth forth forth forth forth forth"
             "sixth sixth sixth seventh seventh seventh"
             "fifth fifth fifth fifth fifth fifth";
+        }
+
+        &__desc {
+            -webkit-line-clamp: 2;
         }
 
     }   
